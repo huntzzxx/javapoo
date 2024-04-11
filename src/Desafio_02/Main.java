@@ -11,13 +11,18 @@ public class Main {
             System.out.println("Insira a temperatura em Celsius: ");
             double temp = sc.nextDouble();
             double temperatura = (temp * 1.8) + 32;
-            System.out.println("Sua temperatura em Celsius é " + temp + " e " + temperatura + " em Fahrenheit.");
+            String numeroFormatado = String.format("%.2f", temperatura);
+            System.out.println("Sua temperatura em Celsius é " + temp + " e " + numeroFormatado + " em Fahrenheit.");
+            System.exit(0);
+
         }
         if (tipo.equals("F")) {
             System.out.println("Insira a temperatura em Fahrenheit: ");
             double temp = sc.nextDouble();
             double temperatura = (5.0 / 9.0) * (temp - 32);
-            System.out.println("Sua temperatura em Fahrenheit é " + temp + " e " + temperatura + " em Celsius.");
+            String numeroFormatado = String.format("%.2f", temperatura);
+            System.out.println("Sua temperatura em Fahrenheit é " + temp + " e " + numeroFormatado + " em Celsius.");
+            System.exit(0);
         }
         else {
             System.out.println("Insira um valor válido. Insira C para Celsius e F para Fahrenheit.");
