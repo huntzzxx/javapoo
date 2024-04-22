@@ -4,17 +4,25 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        String nome = "João da Silva";
+        String nDaConta = "2945-7";
+        String tipoConta = "Corrente";
+        double saldo = 1042.76;
+        int opcao;
+        int segOpcao;
+
         System.out.println("""
                             Bem vindo ao Banco de Goiânia!);
                             *************************************);
                             Dados iniciais do cliente:
-                           
-                            Nome: João da Silva
-                            Tipo de conta: Corrente
-                            Conta N°: 2945-7
-                            Saldo: R$ 1.042,76
+                           """);
+        System.out.println("Nome: " + nome);
+        System.out.println("Tipo de conta: " + tipoConta);
+        System.out.println("Conta N°: " + nDaConta);
+        System.out.println("Saldo: R$ " + saldo);
+        System.out.println("""
                             *************************************
-                            
+                      
                             Operações disponíveis:""");
         System.out.println("""
                             1 - Consultar saldo
@@ -22,12 +30,6 @@ public class Main {
                             3 - Realizar depósito
                             4 - Sair
                             """);
-
-        double saldo = 1042.76;
-        String nome = "João da Silva";
-        String nDaConta = "2945-7";
-        int opcao;
-        int segOpcao;
 
         while (true) {
             System.out.println("\nDigite a opção desejada:");
