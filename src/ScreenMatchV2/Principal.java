@@ -1,6 +1,8 @@
 package ScreenMatchV2;
 
 import ScreenMatchV2.calculadora.CalculadoraDeTempo;
+import ScreenMatchV2.calculadora.FiltroRecomendacao;
+import ScreenMatchV2.modelos.Episodio;
 import ScreenMatchV2.modelos.Filme;
 import ScreenMatchV2.modelos.Serie;
 
@@ -43,5 +45,15 @@ public class Principal {
         calculadora.inclui(outroFilme);
         calculadora.inclui(lost);
         System.out.println(calculadora.getTempoTotal());
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(meuFilme);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setSerie(lost);
+        episodio.setTotalVisualizacoes(300);
+        filtro.filtra(episodio);
+
     }
 }

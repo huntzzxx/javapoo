@@ -1,4 +1,5 @@
 package ScreenMatchV2.modelos;
+import ScreenMatchV2.calculadora.Classificavel;
 
 public class Episodio implements Classificavel {
     private int numero;
